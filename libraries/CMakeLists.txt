@@ -69,6 +69,7 @@ target_include_directories(LOOPBACK_FILES PUBLIC
         ${WIZNET_DIR}/Ethernet
         ${WIZNET_DIR}/Application/loopback
         )
+        
 
 # DHCP
 add_library(DHCP_FILES STATIC)
@@ -154,6 +155,7 @@ target_include_directories(MQTT_FILES PUBLIC
         ${WIZNET_DIR}/Ethernet
         ${WIZNET_DIR}/Internet/MQTT
         ${WIZNET_DIR}/Internet/MQTTPacket/src
+        ${CMAKE_SOURCE_DIR}/libraries/cjson
         ) 
 
 # SNTP

@@ -76,3 +76,17 @@ foreach(IOLIBRARY_DRIVER_PATCH IN LISTS IOLIBRARY_DRIVER_PATCHES)
 		WORKING_DIRECTORY ${IOLIBRARY_DRIVER_SRC_DIR}
 	)
 endforeach()
+
+# pico-sdk pioasm patch
+message("patching pico-sdk pioasm...")
+file(GLOB PICO_SDK_PATCHES
+    "${RP2040_HAT_C_PATCH_DIR}/02_pico_sdk_pioasm_cstdint.patch"
+)
+foreach(PICO_SDK_PATCH IN LISTS PICO_SDK_PATCHES)
+    message("Running patch ${PICO_SDK_PATCH}")
+    execute_process(
+        COMMAND ${GIT_EXECUTABLE} apply ${PICO_SDK_PATCH}
+        WORKING_DIRECTORY ${PICO_SDK_SRC_DIR}
+    )
+endforeach()
+message("pico-sdk pioasm patched")
