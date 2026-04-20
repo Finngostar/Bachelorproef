@@ -30,6 +30,17 @@ int main() {
         sleep_ms(100);
     }
 
+    printf("\033[31mPRESS 'b' within 3 seconds to enter bootloader...\033[m\n");
+    absolute_time_t deadline = make_timeout_time_ms(3000);
+    while(!time_reached(deadline)) {
+        int c = getchar_timeout_us(0);
+        if (c == 'b') {
+            printf("Entering Bootloader...\n");
+            reset_usb_boot(0, 0);
+        }
+    }
+    
+
     printf("\033[31m*********************************\033[m\n");
     printf("\033[31mDUAL CORE IMPLEMENTATION:\033[m\n");
     printf("\033[36m\tCORE 0:\tIO - SD-card - LED's\033[m\n");
