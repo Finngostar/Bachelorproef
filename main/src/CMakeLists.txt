@@ -30,6 +30,8 @@ target_link_libraries(${TARGET_NAME} PRIVATE
     cjson
     pico_multicore
     hardware_pio
+    pico_bootrom
+    
 )
 
 pico_enable_stdio_usb(${TARGET_NAME} 1)

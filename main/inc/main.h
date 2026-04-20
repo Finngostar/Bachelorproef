@@ -14,8 +14,10 @@
 #include "IO_HANDLER.h"
 #include "printer.h"
 
-#include "types.h"
+#include "types_X.h"
 #include "SD_conf.h"
+#include "pico/bootrom.h"
+#include "pico/time.h"
 
 // main.h - add this line:
 extern wiz_NetInfo g_net_info;

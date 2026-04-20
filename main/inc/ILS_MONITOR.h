@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "types.h"
+#include "types_X.h"
 #include "port_common.h"
 #include "wizchip_conf.h"
 #include "w5x00_spi.h"
