@@ -14,4 +14,10 @@
 #include "IO_HANDLER.h"
 #include "printer.h"
 
+#include "types.h"
+#include "SD_conf.h"
+
+// main.h - add this line:
+extern wiz_NetInfo g_net_info;
+
 #endif

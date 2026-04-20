@@ -6,6 +6,7 @@ add_executable(${TARGET_NAME}
     ILS_MONITOR.c
     printer.c
     hw_config.c
+    SD_conf.c
 )
 
 target_include_directories(${TARGET_NAME} PRIVATE ../inc

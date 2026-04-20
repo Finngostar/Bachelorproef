@@ -62,7 +62,10 @@ extern RGB LED_VALS_LORA[6];
  * ----------------------------------------------------------------------------------------------------
  */
 /* Network */
-static wiz_NetInfo g_net_info =
+
+extern wiz_NetInfo g_net_info;
+
+/* static wiz_NetInfo g_net_info =
     {
         .mac = {0x00, 0x08, 0xDC, 0x12, 0x34, 0x56}, // MAC address
         .ip = {192, 168, 0, 101},                     // IP address
@@ -70,7 +73,7 @@ static wiz_NetInfo g_net_info =
         .gw = {192, 168, 0, 1},                     // Gateway
         .dns = {8, 8, 8, 8},                         // DNS server
         .dhcp = NETINFO_STATIC                       // DHCP enable/disable
-};
+}; */
 
 /* MQTT */
 static uint8_t g_mqtt_send_buf[ETHERNET_BUF_MAX_SIZE] = {
